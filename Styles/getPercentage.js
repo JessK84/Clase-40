@@ -10,9 +10,8 @@
  *  getPercentage(200, 10) // returns 20
  */
 
- const getPercentage = (number, percentage)=> {
-    return (number * percentage)/100;
-}
+ const getPercentage = (number, percentage)=> (number * percentage) / 100
+
 
  
 
