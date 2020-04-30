@@ -14,25 +14,7 @@
  *   getRange(-5, -10, false) // returns [-6, -7, -8, -9]
  */
 
-//  const getRange = (numberA, numberB) => {
-//     let range =[];  
-//             if(numberA<=numberB){
-//                 range =1;
-//                 for (let i = numberA; i <= range.length; i++) {
-//                     numberA++
-//                     ta
 
-//             }
-            
-//              // numberA=number
-         
-        
-//     }
-
-  
-//     return range
-
-//  }
 
  const getRange = (numberA, numberB, inclusive = true) => {
     let range = [];

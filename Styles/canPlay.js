@@ -10,13 +10,27 @@
  * @returns {Boolean} - Devuelve true si puede jugar alguna carta, o false si tiene que retirar del mazo
  * 
  * @example
- *   canPlay(["yellow 3", "yellow 5", "red 8"], "red 2") // returns true
+ *   canPlay(
+ * hand = ["yellow 3", "yellow 5", "red 8"]
+ * face = "5 red"
+ * 
+ * 
  *   canPlay(["yellow 3", "yellow 5", "red 8"], "blue 5") // returns true
  *   canPlay(["yellow 3", "blue 5", "red 8", "red 9"], "green 4") // returns false
  *   canPlay(["yellow 3", "red 8"], "green 2") // returns false
  */
-
-const canPlay =(hand, face) =>{
-    //no entendí la consigna
-    
+   
+const canPlay = (hand, face) => {
+    let faceArray = face.split(" ")//, "blue 5")
+    let result = false
+    for (let i = 0; i < hand.length; i++) {
+        let handArray = hand[i].split(" ") //(["yellow 3", "yellow 5", "red 8"] separar cada elemento de hand
+        for(let j = 0; j < handArray.length; j++){
+            let comparacion = faceArray[0] === handArray[j] || faceArray[1] === handArray[j]
+            comparacion ? result = true : false
+        }
+    }
+    return result
 }
+    
+   
